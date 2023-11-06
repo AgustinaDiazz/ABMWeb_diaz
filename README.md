@@ -12,14 +12,15 @@ Ejecutar las consultas SQL contenidas en el archivo script.sql
  
 Luego se debe configurar la conexion al esquema usuarios dentro de <GlobalNamingResources> en el archivo server.xml de apache-tomcat/conf 
 
+```xml
 <GlobalNamingResources>
-    	<Resource name="jdbc/usuarios" auth="Container"
-          	type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
-          	url= "jdbc:postgresql://localhost:5432/web2"  	 
-          	username= "postgres" password= "123"
-          	maxTotal= "20" maxIdle= "10" maxWaitMillis="-1"/>
+<Resource name="jdbc/usuarios" auth="Container"
+     type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+     url="jdbc:postgresql://localhost:5432/web2"
+     username="postgres" password="123"
+     maxTotal="20" maxIdle="10" maxWaitMillis="-1"/>
 </GlobalNamingResources>
-
+```
 
 
 En el archivo tomcat-users.xml de apache-tomcat/conf se deben establecer los roles ver y ABM y usuarios Admin e Invitado
