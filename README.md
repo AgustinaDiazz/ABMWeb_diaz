@@ -21,12 +21,12 @@ Luego se debe configurar la conexion al esquema usuarios dentro de <GlobalNaming
      maxTotal="20" maxIdle="10" maxWaitMillis="-1"/>
 </GlobalNamingResources>
 ```
-
-
 En el archivo tomcat-users.xml de apache-tomcat/conf se deben establecer los roles ver y ABM y usuarios Admin e Invitado
 
+```xml
 <role rolename="ver"/>
 <role rolename="ABM"/>
 
 <user username="Admin" password="123" roles="ver"/>
 <user username="Invitado" password="123" roles="ver,ABM"/>
+```
